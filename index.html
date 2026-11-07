@@ -1,217 +1,205 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-type="service">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Jameson Tingle Web Design · Websites for East County small businesses</title>
+<meta name="page-type" content="service">
+<meta name="site-kind" content="other">
+<meta name="description" content="Jameson Tingle builds fast, fixed-price websites for restaurants, contractors, and local shops in Santee, Lakeside, and El Cajon.">
+<meta name="theme-color" content="#f4efe6" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231f1f1f'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-size='33' font-weight='900' font-family='Arial,sans-serif' fill='%23f4efe6'%3EJT%3C/text%3E%3Crect x='45' y='47' width='9' height='9' fill='%23b23a2e'/%3E%3C/svg%3E">
+<title>Jameson Tingle Web Design · Websites for local businesses</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Instrument+Sans:wght@400;600&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#f4efe6;--ink:#1f1f1f;--blue:#b23a2e;--mint:#d8cfbc;--panel:#fbf8f2;--muted:#6b6b6b;--line:#ddd6c8;--on-blue:#fff;
+:root{--bg:#f4efe6;--surface:#fbf8f2;--ink:#1f1f1f;--muted:#5d5d5d;--line:#ddd6c8;--red:#b23a2e;--band:#b23a2e;--r:8px;--ease:cubic-bezier(.23,1,.32,1);
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141414;--ink:#f1ede4;--blue:#e0786b;--mint:#4a4a4a;--panel:#1d1d1d;--muted:#a3a3a3;--line:#333;--on-blue:#141414;color-scheme:dark}}
-:root[data-theme="dark"]{--bg:#141414;--ink:#f1ede4;--blue:#e0786b;--mint:#4a4a4a;--panel:#1d1d1d;--muted:#a3a3a3;--line:#333;--on-blue:#141414;color-scheme:dark}
-html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+@media (prefers-color-scheme:dark){:root{--bg:#121212;--surface:#1c1c1c;--ink:#f1ede4;--muted:#a6a6a6;--line:#333;--red:#e8554a;color-scheme:dark}}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth;-webkit-tap-highlight-color:transparent}
 *,*::before,*::after{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 "Instrument Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
-h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.08;margin:0;font-weight:800;letter-spacing:-.02em}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 "Instrument Sans",system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:800;line-height:1.05;letter-spacing:-.02em;margin:0;text-wrap:balance}
+p{text-wrap:pretty;margin:0}
 a{color:inherit}
-:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
-.wrap{max-width:1080px;margin:0 auto;padding:0 1.5rem}
-.eyebrow{font-weight:600;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin:0 0 .75rem}
-nav{display:flex;justify-content:space-between;align-items:center;padding:1.25rem 0;gap:1rem;flex-wrap:wrap}
-nav b{font:800 1.2rem "Bricolage Grotesque",sans-serif;letter-spacing:-.01em}
-nav .links{display:flex;gap:1.5rem;align-items:center;font-weight:600;font-size:.97rem}
-nav a{text-decoration:none;color:var(--muted)}
-nav a:hover{color:var(--ink)}
-nav a.cta{background:var(--ink);color:var(--bg);padding:.55rem 1.1rem;border-radius:2rem}
-.btn{display:inline-block;padding:.9rem 1.6rem;font-weight:600;text-decoration:none;border-radius:.6rem;background:var(--ink);color:var(--bg);transition:transform .15s}
-.btn:hover{transform:translateY(-2px)}
-.btn.alt{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--line)}
-.hero{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:3rem;align-items:center;padding:3.5rem 0 5rem}
-.hero h1{font-size:clamp(2.8rem,7.5vw,5.4rem)}
-.hero h1 em{font-style:normal;background:linear-gradient(transparent 64%,color-mix(in srgb,var(--blue) 30%,transparent) 64%)}
-.hero p.lead{font-size:1.2rem;color:var(--muted);max-width:30rem;margin:1.5rem 0 2rem}
-.hero .btns{display:flex;gap:.75rem;flex-wrap:wrap}
-.trust{display:flex;gap:1.5rem;flex-wrap:wrap;margin-top:2rem;color:var(--muted);font-size:.95rem;font-weight:600}
-.trust span::before{content:"✓ ";color:var(--blue)}
-.browser{border:2px solid var(--ink);border-radius:0;background:var(--panel);box-shadow:8px 8px 0 var(--ink);overflow:hidden}
-.bar{display:flex;align-items:center;gap:.4rem;padding:.65rem .9rem;border-bottom:2px solid var(--ink)}
-.bar i{width:.65rem;height:.65rem;border-radius:0;background:var(--ink)}
-.bar u{flex:1;margin-left:.6rem;padding:.2rem .7rem;border-radius:0;background:var(--bg);color:var(--muted);font-size:.78rem;text-decoration:none}
-.screen{background:var(--ink);padding:1.5rem 1.4rem 0;color:var(--bg)}
-.screen b{font:800 .85rem "Bricolage Grotesque",sans-serif}
-.screen h4{margin:1.5rem 0 .75rem;font:400 clamp(1.8rem,5vw,2.6rem)/1 Impact,"Bricolage Grotesque",sans-serif;color:var(--blue);text-transform:uppercase}
-.screen .pill{display:inline-block;background:var(--blue);color:var(--on-blue);padding:.35rem .9rem;border-radius:0;font-weight:800;font-size:.8rem;margin-bottom:1.5rem}
-.screen .strip{height:12px;margin:0 -1.4rem;background:repeating-linear-gradient(90deg,var(--blue) 0 22px,var(--ink) 22px 44px)}
-section{padding:4.5rem 0;border-top:1px solid var(--line)}
-h2{font-size:clamp(1.9rem,4.5vw,2.7rem);margin-bottom:2.25rem;max-width:20ch}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.25rem}
-.card{background:var(--panel);border:1px solid var(--line);padding:1.6rem;border-radius:.9rem}
-.card h3{font-size:1.2rem;margin-bottom:.5rem}
-.card p{margin:0;color:var(--muted)}
-.card .n{font:800 .85rem "Bricolage Grotesque",sans-serif;color:var(--blue);margin-bottom:.9rem;display:block}
-.plan.feat{border:2px solid var(--blue);position:relative}
-.plan.feat::after{content:"Most popular";position:absolute;top:-.8rem;right:1.2rem;background:var(--blue);color:var(--on-blue);font-size:.75rem;font-weight:600;padding:.2rem .7rem;border-radius:1rem}
-.price{font:800 2.3rem "Bricolage Grotesque",sans-serif;margin:.6rem 0 1rem}
-.price small{font:400 .95rem "Instrument Sans",sans-serif;color:var(--muted)}
-.plan ul{padding:0;margin:0;list-style:none;color:var(--muted)}
-.plan li{padding:.35rem 0 .35rem 1.5rem;position:relative}
-.plan li::before{content:"✓";position:absolute;left:0;color:var(--blue);font-weight:800}
-.note{margin-top:1.5rem;color:var(--muted);font-size:.95rem}
-.work{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:3rem;align-items:center}
-.work p{color:var(--muted);margin:1rem 0 1.5rem}
-.tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem}
-.tags span{border:1px solid var(--line);border-radius:2rem;padding:.2rem .8rem;font-size:.85rem;font-weight:600;color:var(--muted)}
-details{border-bottom:1px solid var(--line);padding:1.1rem 0}
-summary{cursor:pointer;font-weight:600;font-size:1.1rem;list-style:none;display:flex;justify-content:space-between;gap:1rem}
-summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--blue)}
-details[open] summary::after{content:"–"}
-details p{color:var(--muted);margin:.75rem 0 0;max-width:46rem}
-.contact{background:var(--ink);color:var(--bg);border-radius:1.25rem;padding:3.25rem 2rem;text-align:center}
-.contact h2{margin:0 auto 1rem;color:var(--bg)}
-.contact p{max-width:32rem;margin:0 auto 1.75rem;opacity:.8;font-size:1.15rem}
-.contact .btn{background:var(--bg);color:var(--ink)}
-footer{padding:2.5rem 0 3rem;color:var(--muted);font-size:.92rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
-.art{position:relative;padding:2rem 1.25rem 3rem;background-image:radial-gradient(var(--line) 1.5px,transparent 1.5px);background-size:22px 22px;border-radius:0}
-.art .browser{transform:rotate(-2deg)}
-.phone{position:absolute;right:0;bottom:0;width:32%;min-width:104px;aspect-ratio:9/17;border:5px solid var(--ink);border-radius:.3rem;background:var(--panel);overflow:hidden;box-shadow:0 18px 40px -16px rgba(0,0,0,.45);padding:.6rem;transform:rotate(3deg)}
-.phone .ph-top{height:34%;border-radius:0;background:var(--blue);margin-bottom:.6rem}
-.phone i{display:block;height:.45rem;border-radius:0;background:var(--line);margin-bottom:.5rem}
-.phone i.s{width:60%}
-.phone .ph-btn{height:1.3rem;border-radius:0;background:var(--ink);margin-top:.9rem}
-.chip{position:absolute;padding:.4rem .9rem;border-radius:0;font-weight:600;font-size:.85rem;box-shadow:0 8px 20px -10px rgba(0,0,0,.5)}
-.chip.a{top:.4rem;left:.2rem;background:var(--ink);color:var(--bg);transform:rotate(-5deg)}
-.chip.b{bottom:.6rem;left:1.2rem;background:var(--blue);color:var(--on-blue);transform:rotate(3deg)}
-.ticker{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:.9rem 0;white-space:nowrap}
-.ticker div{display:inline-block;animation:slide 28s linear infinite;font:800 1rem "Bricolage Grotesque",sans-serif;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
-.ticker b{color:var(--blue);margin:0 1.1rem}
-@keyframes slide{to{transform:translateX(-50%)}}
-@media (prefers-reduced-motion:reduce){.ticker div{animation:none}}
-.stage{position:relative;padding:2rem 1.25rem;border:2px solid var(--ink);background:linear-gradient(rgba(0,0,0,.3) 3px,transparent 3px) 0 0/64px 32px,linear-gradient(90deg,rgba(0,0,0,.3) 3px,transparent 3px) 0 0/64px 32px,#6b6b6b}
-.paper{position:relative;background:var(--panel);border:2px solid var(--ink);padding:.6rem;transform:rotate(-1.2deg);box-shadow:6px 6px 0 rgba(0,0,0,.45)}
-.paper::before{content:"";position:absolute;top:-14px;left:38%;width:84px;height:26px;background:var(--mint);opacity:.9;transform:rotate(3deg);border:1px solid rgba(0,0,0,.2)}
-.paper svg{display:block;width:100%;height:auto}
-.sk{fill:none;stroke:var(--ink);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
-.sk.v{stroke:var(--blue)}
-.sk.f{fill:var(--mint)}
-.hand{font-family:Caveat,cursive;font-weight:600;fill:var(--blue)}
-.serp{background:var(--panel);border:2px solid var(--ink);box-shadow:8px 8px 0 var(--ink);color:var(--ink)}
-.sbar{display:flex;align-items:center;gap:.8rem;padding:.85rem 1rem;border-bottom:2px solid var(--ink);font-weight:600}
-.mag{width:1rem;height:1rem;border:2.5px solid var(--ink);border-radius:50%;position:relative;flex:none}
-.mag::after{content:"";position:absolute;width:.55rem;height:2.5px;background:var(--ink);right:-.5rem;bottom:-.15rem;transform:rotate(45deg)}
-.res{padding:1rem}
-.res+.res{border-top:1px solid var(--line)}
-.rurl{font-size:.8rem;color:var(--muted)}
-.rtitle{font:800 1.4rem "Bricolage Grotesque",sans-serif;color:var(--blue);margin:.1rem 0 .25rem}
-.rmeta{font-size:.9rem;color:var(--muted)}
-.rmeta .st{color:#e0a100;letter-spacing:.1em}
-.rmeta .ok{color:#1a8a4a;font-weight:600}
-.rbtns{display:flex;gap:.5rem;margin-top:.9rem;flex-wrap:wrap}
-.rbtns span{border:2px solid var(--ink);padding:.3rem .8rem;font-weight:600;font-size:.85rem}
-.rbtns span:first-child{background:var(--ink);color:var(--bg)}
-.ghost i{display:block;height:.55rem;background:var(--line);margin-bottom:.55rem}
-.ghost i:first-child{width:45%;height:.8rem}
-.ghost i.s{width:70%}
-.tagx,.tagy{position:absolute;padding:.4rem .9rem;font-weight:600;font-size:.85rem;border:2px solid var(--ink)}
-.tagx{top:-1rem;right:1rem;background:var(--ink);color:var(--bg);transform:rotate(3deg)}
-.tagy{bottom:-1rem;left:1.2rem;background:var(--blue);color:var(--on-blue);transform:rotate(-3deg)}
+a,button,summary{touch-action:manipulation}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 1.5rem}
+.eyebrow{font-weight:600;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:var(--red);margin-bottom:.9rem}
+h2{font-size:clamp(2rem,4.5vw,3rem);margin-bottom:2.5rem}
+section{padding:5.5rem 0;border-top:1px solid var(--line)}
+/* nav */
+nav{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1.1rem 0}
+.logo{display:block;line-height:0;flex:none}.logo svg{height:44px;width:187px}
+.links{display:flex;align-items:center;gap:1.75rem;font-weight:600}
+.links a:not(.btn){position:relative;text-decoration:none;color:var(--muted)}
+.links a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:2px;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform 200ms var(--ease)}
+/* buttons: one pair */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:.75rem 1.5rem;border-radius:var(--r);font-weight:600;text-decoration:none;background:var(--ink);color:var(--bg);transition:transform 160ms var(--ease)}
+.btn.alt{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn:active{transform:scale(.97)}
+@media (hover:hover) and (pointer:fine){.btn:hover{transform:translateY(-2px)}.btn:active{transform:scale(.97)}.links a:not(.btn):hover::after{transform:scaleX(1)}}
+/* hero */
+.hero{border-top:0;padding:3rem 0 5.5rem}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:4rem;align-items:center}
+h1{font-size:clamp(2.7rem,5.6vw,4.9rem)}
+.lead{font-size:1.25rem;color:var(--muted);max-width:30rem;margin:1.5rem 0 2rem}
+.btns{display:flex;gap:.75rem;flex-wrap:wrap}
+.fact{margin-top:1.75rem;font-weight:600}
+.fact span{color:var(--red)}
+/* product UI: a client's site */
+.browser{border:1.5px solid var(--ink);border-radius:var(--r);background:var(--surface);overflow:hidden}
+.bar{display:flex;align-items:center;gap:.4rem;padding:.65rem .9rem;border-bottom:1.5px solid var(--ink)}
+.bar i{width:.6rem;height:.6rem;border-radius:50%;background:var(--ink)}
+.bar u{flex:1;margin-left:.6rem;padding:.15rem .7rem;border:1px solid var(--line);border-radius:99px;font-size:.78rem;color:var(--muted);text-decoration:none}
+.site{background:#f4efe6;color:#1f1f1f}
+.site .sn{display:flex;justify-content:space-between;padding:.8rem 1.1rem;font-size:.82rem;font-weight:600}
+.site .sn span:last-child{display:flex;gap:1rem;color:#5d5d5d}
+.site .sh{background:#b23a2e;color:#fff;padding:2rem 1.1rem 1.6rem}
+.site h4{font:800 clamp(1.5rem,2.6vw,2.1rem)/1.05 "Bricolage Grotesque",sans-serif;margin:0 0 1.1rem;letter-spacing:-.02em}
+.site .sb{display:flex;gap:.5rem;flex-wrap:wrap}
+.site .sb b{padding:.45rem .9rem;border-radius:6px;background:#f4efe6;color:#1f1f1f;font-size:.82rem}
+.site .sb b+b{background:transparent;box-shadow:inset 0 0 0 1.5px #fff;color:#fff}
+.site .sf{display:flex;gap:.5rem;padding:.9rem 1.1rem;font-size:.8rem;font-weight:600;color:#5d5d5d}
+.site .sf span{padding:.2rem .7rem;border:1px solid #ddd6c8;border-radius:99px}
+/* services */
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:1.5rem}
+.frag{height:170px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg);margin-bottom:1.4rem;padding:1rem;display:flex;flex-direction:column;justify-content:center;gap:.5rem;font-size:.9rem;font-weight:600}
+.frag .row{display:flex;justify-content:space-between;padding:.45rem .7rem;border:1px solid var(--line);border-radius:6px;background:var(--surface)}
+.frag .row em{font-style:normal;color:var(--red)}
+.frag .row span{color:var(--muted)}
+.frag.ph{align-items:center}
+.phone{width:84px;height:140px;border:2px solid var(--ink);border-radius:14px;padding:8px;display:flex;flex-direction:column;gap:6px;background:var(--surface)}
+.phone i{display:block;border-radius:4px;background:var(--line);height:8px}
+.phone i.h{height:38px;background:var(--red)}.phone i.b{height:16px;background:var(--ink)}
+.card h3{font-size:1.3rem;margin-bottom:.5rem}
+.card p{color:var(--muted)}
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;list-style:none;padding:0;margin:0;counter-reset:s}
+.steps li{counter-increment:s;border-top:3px solid var(--ink);padding-top:1rem}
+.steps li::before{content:counter(s);display:block;font:800 1.7rem "Bricolage Grotesque",sans-serif;color:var(--red);margin-bottom:.6rem}
+.steps b{display:block;font-size:1.1rem;margin-bottom:.3rem}
+.steps span{color:var(--muted)}
+/* pricing */
+.plans{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem;max-width:760px}
+.price{font:800 3rem/1 "Bricolage Grotesque",sans-serif;font-variant-numeric:tabular-nums;margin:.8rem 0 1.2rem}
+.price small{font:400 1rem "Instrument Sans",sans-serif;color:var(--muted)}
+.plans ul{list-style:none;padding:0;margin:0}
+.plans li{padding:.4rem 0 .4rem 1.6rem;position:relative}
+.plans li::before{content:"";position:absolute;left:0;top:.95rem;width:.8rem;height:.45rem;border-left:2.5px solid var(--red);border-bottom:2.5px solid var(--red);transform:rotate(-45deg)}
+.after{margin-top:1.5rem;color:var(--muted)}
+/* faq */
+.faq{max-width:760px}
+details{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem;min-height:56px;font-weight:600;font-size:1.1rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.5rem;line-height:1;color:var(--red);transition:transform 200ms var(--ease)}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--muted);padding:0 0 1.2rem;max-width:44rem}
+/* contact band */
+.contact{background:var(--band);color:#fff;border-top:0}
+.contact h2{color:#fff;margin-bottom:1rem}
+.contact p{font-size:1.2rem;max-width:32rem;margin-bottom:1.75rem}
+.contact .btn{background:#f4efe6;color:#1f1f1f}
+footer{padding:2rem 0 2.5rem;color:var(--muted);font-size:.95rem}
+footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:center}
+.fl{display:flex;align-items:center;gap:.7rem}.fl svg{width:34px;height:34px;flex:none}
+.lg-i{fill:var(--ink)}.lg-b{fill:var(--bg)}.lg-s{fill:var(--muted)}.lg-r{fill:var(--red)}
+.lg-t{font-family:"Bricolage Grotesque",Impact,sans-serif;font-weight:800}.lg-u{font-family:"Instrument Sans",Arial,sans-serif;font-weight:600}
+@media (max-width:900px){.hero .wrap{grid-template-columns:1fr;gap:2.5rem}.cols{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.frag{height:auto;min-height:150px}}
+@media (max-width:640px){.wrap{padding:0 1.15rem}section{padding:3.5rem 0}.hero{padding:1.5rem 0 3rem}.hide-sm{display:none}.links{gap:1rem}.btns{flex-direction:column}.btns .btn,.contact .btn{width:100%;text-align:center}.plans,.steps{grid-template-columns:1fr}h2{margin-bottom:1.75rem}footer .wrap{flex-direction:column;align-items:flex-start}}
+.card,.browser{transition:transform 220ms var(--ease)}
+.steps li{transition:border-color 220ms ease}
+@media (hover:hover) and (pointer:fine){.card:hover,.browser:hover{transform:translateY(-3px)}.steps li:hover{border-top-color:var(--red)}}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.hero .wrap>div:first-child>*{animation:rise 500ms var(--ease) backwards}
+.hero .wrap>div:first-child>:nth-child(2){animation-delay:70ms}
+.hero .wrap>div:first-child>:nth-child(3){animation-delay:140ms}
+.hero .wrap>div:first-child>:nth-child(4){animation-delay:210ms}
+.hero .wrap>div:first-child>:nth-child(5){animation-delay:280ms}
+.hero .browser{animation:rise 600ms var(--ease) 200ms backwards}
+details{interpolate-size:allow-keywords}
+details::details-content{height:0;overflow:clip;transition:height 250ms var(--ease),content-visibility 250ms allow-discrete}
+details[open]::details-content{height:auto}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <nav aria-label="Main">
-    <b>Jameson Tingle Web Design</b>
-    <div class="links"><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a class="cta" href="#contact">Get a quote</a></div>
-  </nav>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="icon" viewBox="0 0 64 64"><rect x="2" y="2" width="60" height="60" class="lg-i"/><text x="32" y="43" text-anchor="middle" font-size="33" class="lg-b lg-t">JT</text><rect x="45" y="47" width="9" height="9" class="lg-r"/></symbol>
+<symbol id="lockup" viewBox="0 0 340 80"><use href="#icon" x="0" y="4" width="72" height="72"/><text x="88" y="45" font-size="30" class="lg-i lg-t">Jameson Tingle</text><text x="89" y="67" font-size="12.5" letter-spacing="4.4" class="lg-s lg-u">WEB DESIGN</text></symbol>
+</defs></svg>
 
-  <header class="hero">
-    <div>
-      <p class="eyebrow">Santee · Lakeside · El Cajon</p>
-      <h1>They Google you <em>before</em> they ever walk in.</h1>
-      <p class="lead">I build fast, honest websites for restaurants, contractors, and local shops. One real person, one fixed price, and you own every bit of it.</p>
-      <div class="btns"><a class="btn" href="#contact">Get a free quote</a><a class="btn alt" href="#pricing">See pricing</a></div>
-      <div class="trust"><span>You own your site</span><span>Fixed prices</span><span>Local support</span></div>
+<header><div class="wrap"><nav aria-label="Main">
+  <a class="logo" href="#" aria-label="Jameson Tingle Web Design, home"><svg viewBox="0 0 340 80" role="img"><use href="#lockup"/></svg></a>
+  <div class="links"><a class="hide-sm" href="#pricing">Pricing</a><a class="hide-sm" href="#faq">Questions</a><a class="btn" href="#contact">Get a quote</a></div>
+</nav></div></header>
+
+<main>
+<section class="hero"><div class="wrap">
+  <div>
+    <p class="eyebrow">Santee · Lakeside · El Cajon</p>
+    <h1>Websites for local businesses</h1>
+    <p class="lead">I build fast, clear sites for restaurants, contractors, and shops. One person, one fixed price, and you own all of it.</p>
+    <div class="btns"><a class="btn" href="#contact">Get a free quote</a><a class="btn alt" href="#pricing">See pricing</a></div>
+    <p class="fact"><span>From $200.</span> Ready for review about a week after I have your photos and details.</p>
+  </div>
+  <div class="browser" aria-hidden="true">
+    <div class="bar"><i></i><i></i><i></i><u>yourbusiness.com</u></div>
+    <div class="site">
+      <div class="sn"><span>Your Business</span><span><span>Services</span><span>About</span><span>Contact</span></span></div>
+      <div class="sh"><h4>Call, book, or<br>stop by today.</h4><div class="sb"><b>Call now</b><b>Get directions</b></div></div>
+      <div class="sf"><span>Services</span><span>Hours</span><span>Reviews</span></div>
     </div>
-    <div class="stage" aria-hidden="true">
-      <div class="paper">
-        <svg viewBox="0 0 420 385">
-          <path class="sk" d="M14 46Q210 41 406 45Q411 180 407 318Q210 323 12 320Q9 180 14 46Z"/>
-          <path class="sk" d="M13 84Q210 81 407 85"/>
-          <circle class="sk" cx="30" cy="65" r="5"/><circle class="sk" cx="46" cy="64" r="5"/><circle class="sk" cx="62" cy="65" r="5"/>
-          <text class="hand" x="84" y="72" font-size="22">Your Name</text>
-          <path class="sk" d="M214 65Q238 62 262 65M282 64Q302 62 322 65"/>
-          <path class="sk f" d="M340 55Q368 52 398 55Q400 65 397 74Q368 77 339 74Q337 65 340 55Z"/>
-          <path class="sk v" d="M30 114Q120 109 214 115" style="stroke-width:9"/>
-          <path class="sk" d="M30 138Q96 135 160 139" style="stroke-width:6"/>
-          <path class="sk f" d="M30 162Q80 158 128 163Q131 178 127 190Q80 194 31 189Q28 175 30 162Z"/>
-          <path class="sk" d="M240 102Q316 97 392 103Q395 150 391 204Q316 209 241 203Q237 150 240 102Z"/>
-          <path class="sk" d="M244 106L388 200M388 106L245 200" style="stroke-width:1.5"/>
-          <path class="sk" d="M28 226Q80 222 132 227Q135 268 131 308Q80 312 29 307Q26 268 28 226Z"/>
-          <path class="sk" d="M150 227Q202 223 254 226Q257 268 253 309Q202 311 151 308Q148 268 150 227Z"/>
-          <path class="sk" d="M272 226Q324 223 376 227Q379 268 375 308Q324 312 273 307Q270 268 272 226Z"/>
-          <path class="sk" d="M40 246Q70 244 100 247M40 266Q80 264 110 267M162 246Q192 244 222 247M162 266Q202 264 232 267M284 246Q314 244 344 247M284 266Q324 264 354 267" style="stroke-width:2"/>
-          <text class="hand" x="214" y="28" font-size="26">phone # up top!</text>
-          <path class="sk v" d="M340 36Q362 40 366 52M366 52L358 47M366 52L369 43"/>
-          <text class="hand" x="106" y="364" font-size="26">menu + prices, no hunting</text>
-          <path class="sk v" d="M96 352Q74 336 78 316M78 316L72 326M78 316L87 324"/>
-        </svg>
-      </div>
-    </div>
-  </header>
+  </div>
+</div></section>
 
-  <div class="ticker" aria-hidden="true"><div>Restaurants<b>✦</b>Contractors<b>✦</b>Salons<b>✦</b>Cleaners<b>✦</b>Auto repair<b>✦</b>Landscapers<b>✦</b>Restaurants<b>✦</b>Contractors<b>✦</b>Salons<b>✦</b>Cleaners<b>✦</b>Auto repair<b>✦</b>Landscapers<b>✦</b></div></div>
+<section id="services"><div class="wrap">
+  <h2>What you get</h2>
+  <div class="cols">
+    <div class="card"><div class="frag"><div class="row">Services <span>›</span></div><div class="row">Hours <span>›</span></div><div class="row">Phone <span>›</span></div><div class="row">Directions <span>›</span></div></div><h3>Found fast</h3><p>Your menu or services, hours, address, and phone number up front, so customers don’t have to hunt for them.</p></div>
+    <div class="card"><div class="frag ph"><div class="phone"><i class="h"></i><i></i><i></i><i class="b"></i></div></div><h3>Built for phones</h3><p>Most people look you up on their phone. Every page loads fast and reads clearly on a small screen.</p></div>
+    <div class="card"><div class="frag"><div class="row">Domain <em>yourbusiness.com</em></div><div class="row">Owner <em>You</em></div><div class="row">Files <em>Yours</em></div></div><h3>Yours to keep</h3><p>The domain is registered in your name and the site is yours. No lock-in.</p></div>
+  </div>
+</div></section>
 
-  <section id="why">
-    <p class="eyebrow">What you get</p>
-    <h2>Hours. Menu. Phone number. Zero hunting.</h2>
-    <div class="cards">
-      <div class="card"><span class="n">01</span><h3>Found in seconds</h3><p>Your menu or services, hours, address, and phone up front, so people don’t have to hunt for them.</p></div>
-      <div class="card"><span class="n">02</span><h3>Thumb-friendly</h3><p>Most customers look you up on their phone. Every page is built to load fast and read clearly on a small screen.</p></div>
-      <div class="card"><span class="n">03</span><h3>Yours. Really.</h3><p>The domain is registered in your name and the site is yours. No lock-in, no disappearing act.</p></div>
-    </div>
-  </section>
+<section id="process"><div class="wrap">
+  <h2>How it works</h2>
+  <ol class="steps">
+    <li><b>We talk</b><span>A short call about your business and what customers need to see.</span></li>
+    <li><b>You see a draft</b><span>I send a working preview, and you tell me what to change.</span></li>
+    <li><b>You approve</b><span>Half to start, half when you’re happy with the result.</span></li>
+    <li><b>It goes live</b><span>I set it up on your own domain and hand everything over.</span></li>
+  </ol>
+</div></section>
 
-  <section id="pricing">
-    <p class="eyebrow">Pricing</p>
-    <h2>Fixed prices. No surprise invoices.</h2>
-    <div class="cards">
-      <div class="card plan"><h3>Starter site</h3><div class="price">$200 <small>and up</small></div><ul><li>One-page site</li><li>Services, hours, contact</li><li>Mobile-friendly</li><li>Two rounds of changes</li></ul></div>
-      <div class="card plan"><h3>Care plan</h3><div class="price">$50 <small>per month</small></div><ul><li>Hosting and domain care</li><li>Small edits each month</li><li>Fixes if anything breaks</li><li>Cancel anytime, keep your site</li></ul></div>
-    </div>
-    <p class="note">Sample prices. Every project is quoted after we talk, with the scope written down first.</p>
-  </section>
+<section id="pricing"><div class="wrap">
+  <h2>Pricing</h2>
+  <div class="plans">
+    <div class="card"><h3>Starter site</h3><div class="price">$200 <small>and up</small></div><ul><li>One-page site</li><li>Services, hours, contact</li><li>Mobile-friendly</li><li>Two rounds of changes</li></ul></div>
+    <div class="card"><h3>Care plan</h3><div class="price">$50 <small>per month</small></div><ul><li>Hosting and domain care</li><li>Small edits each month</li><li>Fixes if anything breaks</li><li>Cancel anytime, keep your site</li></ul></div>
+  </div>
+  <p class="after">Bigger sites are quoted after a short call, with the scope written down first.</p>
+</div></section>
 
-  <section id="process">
-    <p class="eyebrow">Process</p>
-    <h2>Four steps from hello to live</h2>
-    <div class="cards">
-      <div class="card"><span class="n">STEP 1</span><h3>We talk</h3><p>A short call about your business and what customers need to see.</p></div>
-      <div class="card"><span class="n">STEP 2</span><h3>You see a draft</h3><p>I send a working preview, and you tell me what to change.</p></div>
-      <div class="card"><span class="n">STEP 3</span><h3>You approve</h3><p>Half to start, half when you’re happy with the result.</p></div>
-      <div class="card"><span class="n">STEP 4</span><h3>It goes live</h3><p>I set it up on your own domain and hand everything over.</p></div>
-    </div>
-  </section>
-
-  <section id="faq">
-    <p class="eyebrow">Questions</p>
-    <h2>Straight answers</h2>
+<section id="faq"><div class="wrap">
+  <h2>Questions</h2>
+  <div class="faq">
     <details><summary>Who owns the website?</summary><p>You do. The domain is registered in your name, and once the final payment is made, the site and its files are yours. If you ever stop the monthly plan, you keep everything.</p></details>
     <details><summary>What if I need a change later?</summary><p>Small edits like new hours or menu items are covered by the care plan. Bigger changes are quoted up front, so there are no surprise bills.</p></details>
     <details><summary>How long does it take?</summary><p>A starter site is usually ready for review within a week of receiving your photos and details. Larger sites take longer, and I’ll give you a date before we start.</p></details>
     <details><summary>Do I need to buy anything else?</summary><p>Just your domain name, usually about $10 to $20 a year. I’ll walk you through buying it in your own name.</p></details>
-  </section>
+  </div>
+</div></section>
 
-  <section id="contact" style="border-top:0;padding-top:2rem">
-    <div class="contact">
-      <h2>Ready when you are</h2>
-      <p>Tell me about your business and I’ll get back to you with ideas and a price.</p>
-      <a class="btn" href="mailto:jamesontinglewebdesign@gmail.com">jamesontinglewebdesign@gmail.com</a>
-    </div>
-  </section>
+<section id="contact" class="contact"><div class="wrap">
+  <h2>Get a free quote</h2>
+  <p>Tell me about your business and I’ll get back to you with ideas and a price.</p>
+  <a class="btn" href="mailto:jamesontingle@gmail.com">Email jamesontingle@gmail.com</a>
+</div></section>
+</main>
 
-  <footer><span>© Jameson Tingle Web Design · Santee, California</span><span>Serving Santee, Lakeside, and El Cajon</span></footer>
-</div>
+<footer><div class="wrap"><span class="fl"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#icon"/></svg>© Jameson Tingle Web Design · Santee, California</span><span>Serving Santee, Lakeside, and El Cajon</span></div></footer>
 </body>
 </html>
