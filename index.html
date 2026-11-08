@@ -123,6 +123,13 @@ details{interpolate-size:allow-keywords}
 details::details-content{height:0;overflow:clip;transition:height 250ms var(--ease),content-visibility 250ms allow-discrete}
 details[open]::details-content{height:auto}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+footer a{text-decoration:underline;text-underline-offset:3px}
+.terms{max-width:760px;padding:1rem 0 5rem}
+.terms h1{font-size:clamp(2.4rem,5vw,3.6rem);margin-bottom:.75rem}
+.terms .upd{color:var(--muted);margin-bottom:2rem}
+.terms h2{font-size:1.5rem;margin:2.5rem 0 .75rem}
+.terms p,.terms li{margin-bottom:.75rem}
+.terms ul{padding-left:1.2rem;margin:0 0 .75rem}
 </style>
 </head>
 <body>
@@ -200,6 +207,6 @@ details[open]::details-content{height:auto}
 </div></section>
 </main>
 
-<footer><div class="wrap"><span class="fl"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#icon"/></svg>© Jameson Tingle Web Design · Santee, California</span><span>Serving Santee, Lakeside, and El Cajon</span></div></footer>
+<footer><div class="wrap"><span class="fl"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#icon"/></svg>© Jameson Tingle Web Design · Santee, California</span><span>Serving Santee, Lakeside, and El Cajon · <a href="terms.html">Terms</a></span></div></footer>
 </body>
 </html>
